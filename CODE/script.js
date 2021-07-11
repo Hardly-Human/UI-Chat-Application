@@ -18,9 +18,14 @@ sendLocation.addEventListener("click", (e) => {
 	if (!navigator.geolocation) {
 		return alert("Geolocation is not Supported");
 	}
-	data = {
-		latitude: navigator.geolocation.latitude,
-		longitude: navigator.geolocation.longitude,
-	};
-	return alert(`Latitude : ${data.latitude}, Longitude: ${data.longitude}`);
+
+	navigator.geolocation.getCurrentPosition((position) => {
+		data = {
+			latitude: position.coords.latitude,
+			longitude: position.coords.longitude,
+		};
+		return alert(
+			`Latitude : ${data.latitude}, Longitude: ${data.longitude}`
+		);
+	});
 });
