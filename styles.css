@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	background: linear-gradient(
+		248.2deg,
+		rgba(255, 116, 107, 0.58) 26.05%,
+		rgba(112, 255, 255, 0.54) 65.47%
+	);
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main {
+	position: absolute;
+	width: 60vw;
+	height: 80vh;
+
+	background: rgba(147, 147, 147, 0.51);
+	border-radius: 32px;
+
+	display: grid;
+	grid-template-rows: 2fr 7fr;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: "header header" "messages form";
+	align-items: center;
+	justify-items: center;
+}
+
+.header {
+	font-size: 1.2rem;
+	font-weight: bold;
+	grid-area: header;
+	position: absolute;
+	width: 25vw;
+	height: 8vh;
+
+	background: #ffe66d;
+	border-radius: 32px;
+}
+
+.messages {
+	grid-area: messages;
+}
+
+.message {
+	font-size: 1.2rem;
+	grid-area: message;
+
+	position: absolute;
+	width: 80%;
+	height: 70%;
+
+	background: #262624;
+	color: white;
+	border-radius: 32px;
+}
+
+.message-1 {
+	grid-area: message-1;
+}
+.message-2 {
+	grid-area: message-2;
+}
+.message-3 {
+	grid-area: message-3;
+}
+.message-4 {
+	grid-area: message-4;
+}
+.message-5 {
+	grid-area: message-5;
+}
+
+.messages-container {
+	position: absolute;
+	width: 40%;
+	height: 60%;
+
+	background: #ffffff;
+	border-radius: 32px;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-items: center;
+	grid-template-areas:
+		"message-1"
+		"message-2"
+		"message-3"
+		"message-4"
+		"message-5";
+}
+
+.form {
+	grid-area: form;
+}
+
+.form-container {
+	position: absolute;
+	width: 40%;
+	height: 60%;
+
+	background: #1a535c;
+	border-radius: 32px;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 2fr 1fr;
+	grid-template-areas: "input" "send-button" "send-location";
+}
+
+input {
+	font-size: 1.5rem;
+	grid-area: input;
+	border: none;
+	position: absolute;
+	width: 85%;
+	height: 40%;
+
+	background: #ffffff;
+	border-radius: 32px;
+	align-self: center;
+	justify-self: center;
+}
+
+.send-button {
+	font-size: 1.2rem;
+	grid-area: send-button;
+	position: absolute;
+	width: 35%;
+	height: 35%;
+
+	background: #ff6b6b;
+	color: white;
+	border-radius: 32px;
+	border: none;
+	align-self: start;
+	justify-self: center;
+	cursor: pointer;
+}
+
+.send-location {
+	font-size: 1.2rem;
+	grid-area: send-location;
+	position: absolute;
+	width: 55%;
+	height: 70%;
+
+	background: #ffe66d;
+	color: black;
+	border-radius: 32px;
+	border: none;
+	align-self: start;
+	justify-self: center;
+	cursor: pointer;
+}
